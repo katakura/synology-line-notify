@@ -30,7 +30,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	URL := "https://notify-api.line.me/api/notify"
 	u, err := url.ParseRequestURI(URL)
 	if err != nil {
-		fmt.Printf("url parameter error")
+		fmt.Printf("url parameter error\n")
 	}
 
 	client := &http.Client{}
@@ -42,7 +42,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	req, err := http.NewRequest("POST", u.String(), body)
 	if err != nil {
-		fmt.Printf("request error")
+		fmt.Printf("request error\n")
 	}
 
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
@@ -50,11 +50,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	_, err = client.Do(req)
 	if err != nil {
-		fmt.Printf("request error")
+		fmt.Printf("request error\n")
 	}
 }
 
 func main() {
+	fmt.Printf("start server\n")
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
 }
