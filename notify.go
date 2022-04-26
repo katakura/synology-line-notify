@@ -10,6 +10,7 @@ import (
 
 // http handler
 func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("remote address=[%s]\n", r.RemoteAddr)
 	fmt.Printf("msg=[%s]\n", r.FormValue("msg"))
 
 	// get message parameter
