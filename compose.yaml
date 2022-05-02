@@ -1,0 +1,9 @@
+services:
+  line-notify:
+    image: synology-line-notify
+    environment:
+      - LINE_TOKEN=
+    ports:
+      - "3000:8080"
+    build:
+      dockerfile: Dockerfile

@@ -29,6 +29,12 @@ docker build -t synology-line-notify .
 docker run -p 3000:8080 -e LINE_TOKEN=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA synology-line-notify
 ```
 
+or after editing the LINE_TOKEN part of the compose.yaml file
+
+```bash
+docker compose up
+```
+
 You may use images from my repository available on DockerHub.
 
 ```bash
