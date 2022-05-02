@@ -16,7 +16,7 @@ To execute directly, do the following in an environment with GoLang
 LINE_TOKEN=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA go run notify.go
 ```
 
-For LINE_TOKEN, specify your TOKEN obtained from https://notify-bot.line.me/
+For LINE_TOKEN, specify your TOKEN obtained from [https://notify-bot.line.me/](https://notify-bot.line.me/)
 
 ### Use as Docker container
 
@@ -80,4 +80,3 @@ In the Parameter Type tab, set msg to Message Content
 Finally, change the notification rules as needed and you're good to go!
 
 ![img06](./docs/notify06.png)
-
